@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta charset="utf-8">
+
+	<title>User Manager</title>
+
+	<link href="http://fonts.googleapis.com/css?family=Open+Sans:400" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<link href="css/styles.css" rel="stylesheet">
+</head>
+
+<body>
+
+	<header class="compact">
+		<h1><a href="#">User Manager</a></h1>
+	</header>
+
+	<div class="main-content">
+
+		<div class="all-users page">
+
+			<a href="#new" id="add-new-user" class="btn btn-primary"><i class="glyphicon glyphicon-user"></i>&nbsp;New User</a>
+
+			<ul class="users-list"></ul>
+
+		</div>
+
+		<div class="single-user"></div>
+
+	</div>
+
+	<div class="new-user-page noDisplay"></div>
+
+	<div class="error page">
+		<h3>Sorry, something went wrong :(</h3>
+	</div>
+
+	</div>
+
+	<script id="users-template" type="x-handlebars-template">​
+		{{#each this}}
+		<li>
+			<h2><b>Name</b> : {{Name}}</h2>
+			<h4><b>Email</b> :{{Email}}</h4>
+			<h4><b>Telephone</b> :{{Telephone}}</h4>
+			<ul class="address-detail">
+				<li><p><span>Street</span>:{{Address.Street}} </p></li>
+				<li><p><span>City</span>: {{Address.City}}</p></li>
+				<li><p><span>State</span>: {{Address.State}}</p></li>
+				<li><p><span>Zip</span> : {{Address.Zip}}</p></li>
+			</ul>
+			<button class="btn btn-warning"><a href="#user/" data-id="{{id}}">Edit User</a></button>
+			<div class="highlight"></div>
+		</li>
+		{{/each}}
+	</script> 
+
+	<script id="new-user-template" type="x-handlebars-template">​
+		<form class="form-horizontal" name="newUser" id="newUser">
+			<div class="form-group">
+				<div class="col-sm-offset-2 col-sm-10 h2 text-info">New User</div>
+			</div>
+			<div class="form-group">
+				<label for="userName" class="col-sm-2 control-label">First Name</label>
+				<div class="col-sm-10">
+					<input type="text" id="userName" name="Name" placeholder="Name...">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="userEmail" class="col-sm-2 control-label">Email</label>
+				<div class="col-sm-10">
+					<input type="email" id="userEmail" name="Email" placeholder="Email...">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="Telephone" class="col-sm-2 control-label">Telephone</label>
+				<div class="col-sm-10">
+					<input type="number" id="Telephone" name="Telephone" placeholder="Telephone...">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="Street" class="col-sm-2 control-label">Street</label>
+				<div class="col-sm-10">
+					<input type="text" id="Street" name="Street" placeholder="Street...">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="City" class="col-sm-2 control-label">City</label>
+				<div class="col-sm-10">
+					<input type="text" id="City" name="City" placeholder="City...">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="State" class="col-sm-2 control-label">State</label>
+				<div class="col-sm-10">
+					<input type="text" id="State" name="State" placeholder="State...">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="Zip" class="col-sm-2 control-label">Zip</label>
+				<div class="col-sm-10">
+					<input type="text" id="Zip" name="Zip" placeholder="Zip...">
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-sm-offset-2 col-sm-10">
+					<button class="btn btn-success" id="create-user"><i class="glyphicon glyphicon-user">Create</i></button>
+				</div>
+			</div>
+			</div>
+		</form>
+	</script>
+
+	<script id="edit-user-template" type="x-handlebars-template">​
+		<form name="editUser" id="editUser" class="form-horizontal">
+			<div class="form-group">
+				<div class="col-sm-offset-2 col-sm-10 h2 text-info">Edit User</div>
+			</div>
+			<div class="form-group">
+				<input type="hidden" id="nId" name="id" value="{{id}}">
+			</div>
+			<div class="form-group">
+				<label for="nName" class="col-sm-2 control-label">Name</label>
+				<div class="col-sm-10">
+					<input type="text" id="nName" name="Name" value="{{Name}}" placeholder="Name...">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="nEmail" class="col-sm-2 control-label">Email</label>
+				<div class="col-sm-10">
+					<input type="text" id="nEmail" name="Email" value="{{Email}}" placeholder="Email...">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="nTelephone" class="col-sm-2 control-label">Telephone</label>
+				<div class="col-sm-10">
+					<input type="text" id="nTelephone" name="Telephone" value="{{Telephone}}" placeholder="Telephone...">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="nStreet" class="col-sm-2 control-label">Street</label>
+				<div class="col-sm-10">
+					<input type="text" id="nStreet" name="Street" value="{{Address.Street}}" placeholder="Street...">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="nCity" class="col-sm-2 control-label">City</label>
+				<div class="col-sm-10">
+					<input type="text" id="nCity" name="City" value="{{Address.City}}" placeholder="City...">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="nState" class="col-sm-2 control-label">State</label>
+				<div class="col-sm-10">
+					<input type="text" id="nState" name="State" value="{{Address.State}}" placeholder="State...">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="nZip" class="col-sm-2 control-label">Zip</label>
+				<div class="col-sm-10">
+					<input type="text" id="nZip" name="Zip" value="{{Address.Zip}}" placeholder="Zip...">
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-sm-offset-2 col-sm-10">
+					<button  class="btn btn-success" id="saveEdits"><i class="glyphicon glyphicon-user">Update</i></button>
+					<button class="btn btn-danger delete" id="deleteUser" ><i class="glyphicon glyphicon-remove"></i>&nbsp;Delete</button>
+				</div>
+			</div>
+		</form>
+	</script> 
+
+
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.min.js"></script>
+	<script src="js/app.js"></script>
+
+
+</body>
+</html>
