@@ -1,5 +1,7 @@
 function editUser(){
     var edits = {};
+
+
     $.each($('#editUser').serializeArray(), function(i,field){
         edits[field.name] = field.value;
     });
