@@ -1,0 +1,25 @@
+{
+    "header": {
+        "home": "",
+        "fleet": "",
+        "fleets": "",
+        "user": "",
+        "templates": "",
+        "reports": "",
+        "sign-out": ""
+    },
+    "footer": {
+        "release-notes": "",
+        "terms-and-conditions": ""
+    },
+    "roles": {
+        "superAdmin": "",
+        "admin": "",
+        "manager": "",
+        "viewer": ""
+    },
+    "select-fleet": "",
+    "custom-translation": "",
+    "search": "",
+    "terms": "China terms of use"
+}
