@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c47c65c9-0437-4890-94e5-4faa47249037" name="Default" comment="Update version to 5">
+    <list default="true" id="c47c65c9-0437-4890-94e5-4faa47249037" name="Default" comment="Update version to 6">
       <change beforePath="$PROJECT_DIR$/components/number.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/number.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -231,7 +231,14 @@
       <option name="project" value="LOCAL" />
       <updated>1658419817670</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Update version to 6">
+      <created>1658420075001</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1658420075001</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TodoView">
@@ -297,7 +304,8 @@
     <MESSAGE value="Update version" />
     <MESSAGE value="Update version to 4" />
     <MESSAGE value="Update version to 5" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update version to 5" />
+    <MESSAGE value="Update version to 6" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update version to 6" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/index.html">
