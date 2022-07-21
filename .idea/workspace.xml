@@ -2,7 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c47c65c9-0437-4890-94e5-4faa47249037" name="Default" comment="Npm init">
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch/ch.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch/no_filename.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/en/en.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/en/no_filename.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/es/es.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/es/no_filename.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/locales/ch.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/locales/en.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zh_CN/no_filename.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zh_CN/zh_CN.json" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -196,7 +207,14 @@
       <option name="project" value="LOCAL" />
       <updated>1658419206005</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Npm init">
+      <created>1658419290566</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1658419290566</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TodoView">
